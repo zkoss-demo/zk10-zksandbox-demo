@@ -58,7 +58,7 @@ public class MainLayoutRichletTest extends WebDriverTestCase {
 
 		assertEquals("Window", jq("$itemList .z-listitem.z-listitem-selected").text().trim());
 
-		assertNoZKError();
+		assertNoAnyError();
 
 		assertEquals("Demo", jq("$demoView").text());
 		assertEquals("View Source", jq("$srcView").text());
@@ -92,7 +92,7 @@ public class MainLayoutRichletTest extends WebDriverTestCase {
 		waitResponse();
 
 		assertEquals("Window", jq("$itemList .z-listitem.z-listitem-selected").text().trim());
-		assertNoZKError();
+		assertNoAnyError();
 
 		click(jq("$c3"));
 		waitResponse();
@@ -100,6 +100,6 @@ public class MainLayoutRichletTest extends WebDriverTestCase {
 		click(jq("$itemList .z-listcell-content:contains(Master)"));
 		waitResponse();
 
-		assertNoZKError();
+		assertNoAnyError();
 	}
 }
